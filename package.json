@@ -8,16 +8,21 @@
   "author": "Ivan Petrov",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "del": "^6.1.1",
     "gulp": "^5.0.0",
-    "gulp-autoprefixer": "^9.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "sass": "^1.77.8"
   },
   "dependencies": {
-    "gulp-concat": "^2.6.1",
+    "autoprefixer": "^9.8.8",
     "gulp-require": "^0.1.4",
+    "imagemin-gifsicle": "^7.0.0",
     "node.js": "^0.0.1-security"
   },
   "description": ""
