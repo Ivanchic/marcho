@@ -8,6 +8,7 @@
   "author": "Ivan Petrov",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^3.0.2",
     "del": "^6.1.1",
     "gulp": "^5.0.0",
