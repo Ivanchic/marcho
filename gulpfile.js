@@ -17,10 +17,30 @@ function browsersync() {
   })
 }
 
-
+// function styles() {
+//   return src(["app/scss/*.scss"])
+//     .pipe(
+//       scss({
+//         outputStyle: "compressed",
+//       })
+//     )
+//     .pipe(
+//       rename({
+//         suffix: ".min",
+//       })
+//     )
+//     .pipe(
+//       autoprefixer({
+//         overrideBrowserslist: ["last 10 versions"],
+//         grid: true,
+//       })
+//     )
+//     .pipe(dest("app/css"))
+//     .pipe(browserSync.stream());
+// }
 
 function styles() {
-    return src("app/scss/style.scss")
+    return src(["app/scss/*.scss"])
       .pipe(scss({ outputStyle: "compressed" }))
       .pipe(concat("style.min.css"))
       .pipe(
@@ -29,7 +49,8 @@ function styles() {
           grid: true
         })
       )
-      .pipe(dest("app/css"));
+      .pipe(dest("app/css"))
+      .pipe(browserSync.stream());
 }
 
 function scripts() {
