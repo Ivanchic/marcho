@@ -1,24 +1,20 @@
-.top-slider {
+.top-slider{
   background-color: $bg;
   padding: 65px 0 45px;
   background-image: url(../images/decor/top-slider-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-
-  &__container {
+  &__container{
     max-width: 1560px;
   }
-
-  &__content {
+  &__content{
     padding-left: 175px;
     padding-top: 125px;
   }
-
   &__item {
     display: flex !important;
     justify-content: space-between;
   }
-
   &__title {
     max-width: 670px;
     font-size: 68px;
@@ -27,13 +23,11 @@
     @extend %roboto-700;
     margin-bottom: 35px;
   }
-
-  &__text {
+  &__text{
     max-width: 470px;
     margin-bottom: 55px;
   }
-
-  &__link {
+  &__link{
     @extend %btn;
     padding: 14px 36px;
   }
@@ -78,6 +72,57 @@
           }
         }
       }
+    }
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .top-slider {
+    &__img {
+      width: 40%;
+      object-fit: contain;
+    }
+    &__content {
+      padding-left: 15px;
+      padding-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .top-slider {
+    &__item {
+      .top-slider__img {
+        display: none;
+      }
+    }
+    .slick-dots {
+      margin-top: 0;
+    }
+    &__content {
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
+  }
+}
+@media (max-width: 620px) {
+  .top-slider {
+    padding: 45px 0 30px;
+    &__title {
+      font-size: 44px;
+      line-height: 52px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .top-slider {
+    &__title {
+      font-size: 38px;
+      line-height: 48px;
+      margin-bottom: 20px;
     }
   }
 }

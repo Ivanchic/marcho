@@ -1,64 +1,51 @@
-.footer {
+.footer{
   background-color: $bg;
-
 }
-
-.footer-top {
+.footer-top{
   padding: 70px 0 40px;
   border-bottom: 1px solid #ececec;
   display: flex;
-
   &__contact {
     width: 250px;
     margin-right: 50px;
   }
-
-  &__nav {
+  &__nav{
     width: 270px;
     margin-right: 70px;
   }
-
-  &__item-form {
+  &__item-form{
     width: 470px;
   }
-
-  &__logo {
+  &__logo{
     margin-bottom: 33px;
     display: block;
   }
-
   &__adress,
   &__email,
   &__phone {
     display: block;
     margin-bottom: 14px;
   }
-
   &__social-list {
     display: flex;
     align-items: center;
     margin-top: 30px;
   }
-
   &__social-item+.footer-top__social-link {
     padding-left: 18px;
   }
-
   &__social-link {
     transition: all .3s;
-
     path {
       fill: $default;
     }
-
-    &:hover {
+    &:hover{
       path {
         fill: $accent;
       }
     }
   }
-
-  &__title {
+  &__title{
     color: $title;
     @extend %roboto-400;
     margin-bottom: 40px;
@@ -66,52 +53,98 @@
     line-height: 1;
   }
 
-  &__form {
+  &__form{
     display: flex;
+    flex-wrap: wrap;
+    margin-top: 27px;
   }
 
-  &__link {
+  &__link{
     margin-bottom: 14px;
     display: block;
   }
-
   &__text {
     margin-bottom: 40px;
   }
-
-  &__form-input {
-    background-color: #fff;
+  &__form-input{
     max-width: 320px;
-    width: 100%;
     border: none;
     margin-right: 3px;
     padding: 12px 10px 12px 15px;
     box-shadow: 0 7px 20px 0px rgba(192, 192, 192, 0.3);
-
     &::placeholder {
       color: $default;
       font-size: 16px
     }
   }
-
-  &__form-btn {
+  &__form-btn{
     @extend %btn;
     border: none;
     padding: 12px 26px;
     cursor: pointer
   }
 }
-
-.footer-bottom {
+.footer-bottom{
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
-
-  &__accept-img {
+  &__accept-img{
     display: inline-block;
     margin-left: 25px;
     vertical-align: middle;
+  }
+}
+
+
+@media (max-width: 1050px){
+  .footer-top{
+    flex-wrap: wrap;
+    &__item-form{
+      max-width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+@media (max-width: 860px){
+  .footer-top{
+    &__item-form{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 620px){
+  .footer-bottom{
+    justify-content: center;
+    &__copy{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 450px){
+  .footer-top{
+    &__nav{
+      margin-top: 30px;
+    }
+    &__form{
+      flex-wrap: wrap;
+    }
+    &__form-input{
+      max-width: 100%;
+      margin-right: 0;
+    }
+    &__form-btn{
+      width: 100%;
+    }
+  }
+  .footer-bottom{
+    &__accept-img{
+      margin-left: 15px;
+    }
   }
 }
